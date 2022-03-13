@@ -1,0 +1,6 @@
+# IDE files
+.vscode
+
+# Configuration files that may contain sensitive information
+.clasp.json
+src/constants.js

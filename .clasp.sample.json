@@ -1,0 +1,5 @@
+{
+  "scriptId": "__script_id__",
+  "rootDir": "src",
+  "filePushOrder": ["src/constants.js", "src/couponMail.js", "src/triggers.js"]
+}
