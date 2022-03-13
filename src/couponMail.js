@@ -72,7 +72,11 @@ function _formTable(coupons, headers){
 function _formRow(coupon){
   const row = "";
   coupon[COUPON_COLUMNS.LINK] = "".concat("<a href='", coupon[COUPON_COLUMNS.LINK], "'>Click</a>");
-  coupon[COUPON_COLUMNS.EXPIRY] = new Date(coupon[COUPON_COLUMNS.EXPIRY]).toDateString();
+
+  let expiryDate = new Date(coupon[COUPON_COLUMNS.EXPIRY]).toDateString();
+  if (expiryDate === "Invalid Date") expiryDate = "Not available";
+  coupon[COUPON_COLUMNS.EXPIRY] = expiryDate;
+  
   return row.concat("<tr><td>", coupon.join("</td><td>"), "</td></tr>");
 }
 
